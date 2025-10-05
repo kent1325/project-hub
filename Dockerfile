@@ -1,4 +1,4 @@
-FROM python:3.13-slim-bookworm
+FROM python:3.13
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     build-essential && \
@@ -22,4 +22,4 @@ ENV PATH="/app/.venv/bin:{$PATH}"
 # EXPOSE $PORT
 
 # CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
-CMD ["uv", "run", "app.main:app"]
+CMD ["uv", "run", "streamlit", "run", "app.main:app"]

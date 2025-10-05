@@ -1,5 +1,8 @@
+import streamlit as st
+
+
 def main():
-    print("Hello from project-hub!")
+    st.title("Hello from project-hub!")
 
 
 if __name__ == "__main__":
